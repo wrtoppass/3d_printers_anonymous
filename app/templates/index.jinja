@@ -1,0 +1,13 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+
+    <h3>Admins</h3>
+    <p>{{ admins[0] }}</p>
+
+    <h3>3D Printers</h3>
+    {% for owned_printer in owned_printers %}
+    <p>{{ owned_printer }}</p>
+    {% endfor %}
+
+{% endblock %}
