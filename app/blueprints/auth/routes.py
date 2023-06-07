@@ -33,7 +33,7 @@ def signin():
     if form.validate_on_submit():
         user=User.query.filter_by(username=form.username.data).first()
         if user and user.check_password(form.password.data):
-            flash(f'{form.username.data} signed in!', 'Welcome')
+            flash(f'{form.username.data} signed in!', 'Welcome!')
             login_user(user)
             return redirect(url_for('main.home'))
         else:
