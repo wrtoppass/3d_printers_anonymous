@@ -6,4 +6,15 @@ class SignupForm(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
     email = StringField('email', validators=[DataRequired(), Email()])
     password = PasswordField('password', validators=[DataRequired()])
-    submit = SubmitField('sign up')
+    submit = SubmitField('Sign Up')
+
+class SigninForm(FlaskForm):
+    username = StringField('username', validators=[DataRequired()])
+    password = PasswordField('password', validators=[DataRequired()])
+    submit = SubmitField('Sign In')
+
+class PrinterForm(FlaskForm):
+    company =StringField('company', validators=[DataRequired()])
+    name=StringField('name', validators=[DataRequired()])
+    description=StringField('desc')
+    submit = SubmitField('Collect')

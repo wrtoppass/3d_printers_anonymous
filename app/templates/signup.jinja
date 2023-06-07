@@ -1,7 +1,6 @@
-{% extends "base.jinja" %}
-
-{% block content  %}
-<form action="" method="post">
+{% extends "base.j2" %}
+{% block content %}
+   <form action="" method="POST" class="container">
  <h2>Sign Up</h2>
  {{ form.hidden_tag() }}
  <p>
@@ -24,4 +23,4 @@
  </p>
  <p>{{ form.submit() }}</p>
 </form>
-{% endblock  %}
+{% endblock %}
